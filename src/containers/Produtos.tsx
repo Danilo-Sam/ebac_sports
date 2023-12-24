@@ -7,13 +7,6 @@ import { useGetProdutoQuery } from '../services/api'
 import * as S from './styles'
 import { RootReducer } from '../store'
 
-// type Props = {
-//   produtos: ProdutoType[]
-//   favoritos: ProdutoType[]
-//   adicionarAoCarrinho: (produto: ProdutoType) => void
-//   favoritar: (produto: ProdutoType) => void
-// }
-
 const ProdutosComponent = () => {
   const { data: produtos, isLoading } = useGetProdutoQuery()
   if (isLoading) return <h2>Carregando...</h2>
